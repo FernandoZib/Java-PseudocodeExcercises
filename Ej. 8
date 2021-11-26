@@ -1,0 +1,73 @@
+Algoritmo Ej_8
+	
+	Contador<-0
+	Persona<-0
+	Repetir
+		Escribir "Mencione el número de clientes: ";
+		Leer Clientes;
+		Si Clientes <=0 Entonces
+			Escribir "Favor de escribir un número mayor a cero: ";
+		FinSi
+	Hasta Que Clientes>0;
+	
+	Repetir
+		Persona=Persona+1
+		Escribir "Cliente: ", Persona;
+		Repetir
+			Escribir "Elija un destino: "
+			Escribir "1.-Cancún: $20"
+			Escribir "2.-Mérida: $25"
+			Escribir "3.-Tizimín :$10"
+			Escribir "4.-Playa del Cármen: $15"
+			Leer Destino;
+			
+			Segun Destino Hacer
+				1:
+					Cancun=Cancun+1;
+					CDV=CDV+20;
+				2:
+					Merida=Merida+1;
+					CDV=CDV+25;
+				3:
+					Tizimin=Tizimin+1;
+					CDV=CDV+10;
+				4:
+					Playa=Playa+1;
+					CDV=CDV+15;
+				De Otro Modo:
+					Escribir "Favor de seleccionar un número de la lista: "
+			FinSegun
+		Hasta Que Destino>0 y Destino<5;
+		
+		Repetir
+			Escribir "Seleccione una Clase: ";
+			Escribir "1.-Primera: $200";
+			Escribir "2.-Segunda: $100";
+			Leer Clase;
+			Segun Clase Hacer
+				1:
+					PC=PC+1;
+					CDC=CDC+200;
+				2:
+					SC=SC+1;
+					CDC=CDC+100;
+				De Otro Modo:
+					Escribir "Favor de seleccionar un número de la lista";
+			Fin Segun
+		Hasta Que Clase>0 y Clase<3;
+		
+		
+		Contador=Contador+1;
+	Hasta Que Contador=Clientes;	
+	
+	CostoTotal=CDC+CDV;//COSTO DE CLASE + COSTO DE VIAJE
+	
+	Escribir "Eligieron Segunda clase: ", SC, " personas";
+	Escribir "Eligieron Primera clase: ", PC, " personas";
+	Escribir "El número de personas que van a Cancún son: ", Cancun;
+	Escribir "El número de personas que van a Mérida son: ", Merida;
+	Escribir "El número de personas que van a Tizimín son: ", Tizimin;
+	Escribir "El número de personas que van a Playa del cármen son: ", Playa;
+	Escribir "Total en caja es: " CostoTotal;
+	
+FinAlgoritmo

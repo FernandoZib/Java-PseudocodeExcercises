@@ -1,0 +1,29 @@
+Algoritmo Ej_12
+	
+	Escribir "Deme número de entradas: ";
+	leer entradas;
+    Escribir "Precio de entrada: ";
+	Leer Precio;
+	
+	resultado <- precio ;
+	
+	Si entradas=2  entonces
+		resultado = precio-((precio*10)/100); 
+		Escribir "Pagas: ", resultado;
+	FinSi
+	
+	Si entradas=3 Entonces
+		
+			resultado = precio-((precio*15)/100); 
+			Escribir "Pagas: " resultado ;
+	FinSi
+			Si(entradas = 4) Entonces
+				
+				resultado = precio-((precio*20)/100); 
+				Escribir  "Pagas: " resultado; 
+				FinSi
+			 si entradas>4 Entonces
+					
+					Escribir "no se puede vender esta cantidad de entradas";
+				FinSi
+FinAlgoritmo

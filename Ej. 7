@@ -1,0 +1,33 @@
+Algoritmo Ej_7
+	
+	Contador<-1;
+	
+	Repetir
+		Escribir "Deme un número de días: ";
+		Leer Días;
+		Si Días<=0 Entonces
+			Escribir "Digíta un número mayor a 0: ";
+		FinSi
+	Hasta Que Días>1;
+	
+	Repetir
+		Si Contador mod 7=0 Entonces
+			Semanas=Semanas+1;
+		Fin Si
+		Si Contador mod 30=0 Entonces
+			Meses=Meses+1;
+		FinSi
+		Si Contador mod 360=0 Entonces
+			Años=Años+1;
+		FinSi
+		
+		Contador=Contador+1;
+	Hasta Que Contador=Días+1;
+	
+	
+	Escribir "El número de Años es: ", Años;
+	Escribir "El número de Meses es ", Meses;
+	Escribir "El número de Semanas es: ", Semanas;
+	Escribir "El número de Días es: ", Días;
+	
+FinAlgoritmo

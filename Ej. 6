@@ -1,0 +1,55 @@
+Algoritmo Ej_6
+	
+	Persona<-1;
+	
+		Escribir "Bienvenidos: ";
+		
+			Repetir
+				Escribir "¿Se atenderá algún cliente?: ";
+				Leer Clientes
+		si Clientes = "si" o Clientes = "Si" entonces
+				cambio<-0;
+				pago<-0;
+				VTP<-0;
+				NP<-0;
+				VP<-0;
+				P<-1;
+				Contador<-0
+				Escribir "Cliente: ", Persona;
+				Escribir "Dime cuantos productos compraste: ";
+				Leer NP;
+				
+				Repetir
+					
+					Escribir "Cuanto vale el producto: " P "?: ";
+					Leer VP;
+					VTP=VTP+VP;
+					Contador=Contador+1
+					P=P+1;
+				Hasta Que Contador = NP;
+				
+				Repetir
+					Escribir "¿Con cuanto va a pagar? (Escriba un número mayor o igual al de su compra total): ";
+					Leer Pago;
+					Si Pago<=0 y Pago <VTP Entonces
+						Escribir "Realice su pago adecuadamente: ";
+					FinSi
+				Hasta Que Pago>0 y Pago >= VTP
+				
+				VentaTotal=VentaTotal+VTP;
+				cambio=Pago-VTP;
+				
+				Escribir "Su total es de: " VTP;
+				Escribir "Su cambio es de: " cambio;
+				Escribir " ";
+				Persona=Persona+1;
+				
+		FinSi
+		
+	Hasta Que Clientes = "no" o Clientes = "No"
+	
+	
+	Escribir " ";
+	Escribir "El total de clientes atendidos fue de: ", Persona-1;
+	Escribir "El total en caja es de: ", VentaTotal;
+FinAlgoritmo

@@ -1,0 +1,33 @@
+Algoritmo Ej_9
+	
+	Definir calificacion_a_leer como Entero;
+	
+	Repetir
+		Escribir Sin Saltar "Ingrese calificación en valor numérico: ";
+		Leer calificacion_a_leer;
+		Si calificacion_a_leer <=0 o calificacion_a_leer > 20
+			Escribir "Favor de escribir un número mayor a 0 y menor a 21"
+		FinSi
+	Hasta Que calificacion_a_leer>0 y calificacion_a_leer<21
+
+		Si (calificacion_a_leer = 20) o (calificacion_a_leer = 19) Entonces
+			Escribir Sin Saltar "Su nota: ", "A  (Excelente)";
+		FinSi
+		
+		Si (calificacion_a_leer > 15) y (calificacion_a_leer < 19) Entonces
+			Escribir Sin Saltar "Su nota: ", "B  (Muy bueno)";
+		FinSi
+		
+		Si (calificacion_a_leer >=13) y (calificacion_a_leer <= 15) Entonces
+            Escribir Sin Saltar "Su nota: ", "C  (Bueno)";
+		FinSi
+		
+		Si (calificacion_a_leer >=10) y (calificacion_a_leer <= 12) Entonces
+            Escribir Sin Saltar "Su nota: ", "D  (Regular)";
+		FinSi
+		
+		Si (calificacion_a_leer > 0) y (calificacion_a_leer < 9) Entonces
+            Escribir Sin Saltar "Su nota: ", "E  (Insuficiente)";
+		FinSi
+		
+FinAlgoritmo

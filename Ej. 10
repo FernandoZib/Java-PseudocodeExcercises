@@ -1,0 +1,23 @@
+Algoritmo Ej_10
+	
+	m <- 2;
+	band <- Verdadero;
+	
+	Escribir "Favor de ingresar el valor: ";
+	Leer Num;
+	
+		Mientras band = Verdadero y m < Num Hacer
+			Si Num % m = 0 Entonces
+				band <- Falso;
+			SiNo
+				m <- m + 1;
+			FinSi
+			
+		FinMientras
+		Si band = Verdadero Entonces
+			Escribir  "El número: " Num " es primo";
+		SiNo
+			Escribir "El número: " Num " no es primo";
+		FinSi
+
+FinAlgoritmo

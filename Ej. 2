@@ -1,0 +1,24 @@
+Algoritmo Ej_2
+	
+	Repetir
+		Escribir "Dame una cantidad: ";
+		Leer Monto;
+		Si Monto<=0 o Monto=100 Entonces
+			Escribir "Digita una cantidad mayor a cero y que no sea 100: ";
+		Fin Si
+	Hasta Que Monto>0 y Monto<>100;
+	
+	Si Monto>0 y Monto<100 Entonces
+		descuento=(Monto*.02);
+		Monto=Monto-(Monto*.02);
+	Finsi
+	
+	Si Monto >100 Entonces
+		descuento=(Monto*.10);
+		Monto=Monto-(Monto*.10);
+	Fin Si
+	
+	Escribir "El monto es: ", Monto;
+	Escribir "El descuento es de: " descuento;
+	
+FinAlgoritmo

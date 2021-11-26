@@ -1,0 +1,29 @@
+Algoritmo Ej_1
+			
+	Repetir
+		Escribir "Dame el Sueldo: ";
+		Leer Sueldo;
+		Si Sueldo<=0 Entonces
+			Escribir "No puedo recibir negativos ni cero, intenta otra vez: ";
+		Fin Si
+	Hasta Que Sueldo >0;
+	
+	Si Sueldo>0 y Sueldo<=1000 Entonces
+		descuento=(Sueldo*.10);
+		Sueldo=Sueldo-(Sueldo*.10);
+	FinSi
+	
+	Si Sueldo>1000 y Sueldo <=2000 Entonces
+		descuento=(Sueldo*.15);
+		Sueldo=Sueldo-(Sueldo*.15);
+	Fin Si
+	
+	Si Sueldo>2000 Entonces
+		descuento=(Sueldo*.18);
+		Sueldo=Sueldo-(Sueldo*.18);
+	Fin Si
+	
+	Escribir "Su sueldo neto es de:", Sueldo;
+	Escribir "Su descuento es de: ", descuento;
+		
+FinAlgoritmo

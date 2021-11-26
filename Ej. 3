@@ -1,0 +1,71 @@
+Algoritmo Ej_3
+	F<-0
+	M<-0
+	MAYDE<-0
+	MENDE<-0
+	Persona<-1;
+	
+	Mostrar "Escribe el numero de personas que desea procesar"
+	Leer N
+	Para i<-1 Hasta N Con Paso 1 Hacer
+		Escribir "Persona ", Persona;
+		Persona=Persona+1;
+		
+		Escribir "Deme su nombre: ";
+		Leer Nombre;
+		
+		Repetir
+			Escribir "Deme su edad: ";
+			Leer Edad;
+			Si Edad<0 o Edad>110 Entonces
+				Escribir "Trata de escribir un número más realista o apropiado para una persona";
+			FinSi	
+			Si Edad>=18 y Edad<=110 Entonces
+				MayorDeEdad=MayorDeEdad+1;
+				MAYDE=MAYDE+1
+			FinSi
+			Si Edad>0 y Edad<18 Entonces
+				MenorDeEdad=MenorDeEdad+1;
+				MENDE=MENDE+1
+			Fin Si
+		Hasta Que Edad>0 y Edad<=110;
+				
+		Repetir
+			Escribir "Deme su género: ";
+			Leer Genero;
+			Segun Genero Hacer
+				"Masculino" o "masculino" o "Hombre" o "hombre":
+					Masculino<-Masculino+1;
+					M=M+1
+				"Femenino" o "femenino" o "Mujer" o "mujer":
+					Femenino<-Femenino+1
+					F=F+1
+				De Otro Modo:
+					Escribir "Escriba bien el nombre del género:";
+			Fin Segun
+		Hasta Que Genero="Femenino" o Genero="Mujer" o Genero="Hombre" o Genero="Masculino" o Genero="femenino" o Genero="mujer" o Genero="hombre" o Genero="masculino";
+		Escribir " ";
+		
+		Si F=1 y MENDE=1  Entonces
+			PersonasFemeninasMenoresDeEdad=PersonasFemeninasMenoresDeEdad+1
+		Fin Si
+		Si M=1 y MAYDE=1 Entonces
+			PersonasMasculinasMayoresDeEdad=PersonasMasculinasMayoresDeEdad+1
+		FinSi
+		MENDE<-0
+		MAYDE<-0
+		F<-0
+		M<-0
+		
+	Fin Para
+	PorcentajeMayorDeEdad=(MayorDeEdad/N)*100;
+	PorcentajeMenorDeEdad=(MenorDeEdad/N)*100;
+	
+	Escribir "El número de personas del género Masculino es: ", Masculino;
+	Escribir "El número de personas del género Femenino es: ", Femenino;
+	Escribir "El número de personas mayores de edad es: ", MayorDeEdad, " con un porcentaje de: ", PorcentajeMayorDeEdad;
+	Escribir "El número de personas menores de edad es: ", MenorDeEdad, " con un porcentaje de: ", PorcentajeMenorDeEdad;
+	Escribir "El número de personas masculinas mayores de edad es: ", PersonasMasculinasMayoresDeEdad;
+	Escribir "El número de personas femeninas menores de edad es: ", PersonasFemeninasMenoresDeEdad; 
+	
+FinAlgoritmo

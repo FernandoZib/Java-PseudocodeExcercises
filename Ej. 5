@@ -1,0 +1,11 @@
+Algoritmo Ej_5
+	
+	s=1;
+	
+	Escribir "Dame el número de m/s para convertir a km/h: ";
+	Leer ms;
+	KM=(ms/1000) / (1/3600);
+	
+	Escribir ms, "m/s es igual a: ", KM,"km/h";
+	
+FinAlgoritmo

@@ -1,0 +1,34 @@
+Algoritmo Ej_4
+	
+	varContador<-0;
+	varCP<-0;
+	varCI<-0;
+		Repetir
+		Escribir "¿Cuantos números se van a escribir?";
+		Leer N;
+			Si N<=0 Entonces
+				Escribir "Escribe un número mayor a cero: ";
+			FinSi
+	Hasta Que N<>0 o N>0;
+				
+	Repetir
+		Repetir
+			Escribir "Dame un número: ";
+			Leer varNumero;
+			si VarNumero<>0 Entonces
+				Si (varNumero mod 2 = 0) Entonces
+					varCP<-varCP + 1;
+				SiNo
+					varCI<-varCI + 1;
+				Fin Si	
+				varContador<-varContador + 1;
+			SiNo
+				Escribir "Dame un número diferente de cero: ";
+			FinSi
+		Hasta Que N<>0;
+	Hasta Que varContador=N;
+		
+	Escribir "Pares: ", varCP;
+	Escribir "Impares: ", varCI;
+
+FinAlgoritmo
